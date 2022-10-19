@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:semana08_loja/objects/product.dart';
-import 'package:semana08_loja/paginas/produto.dart';
 import 'package:semana08_loja/util/componentes.dart';
 
 class Store extends StatefulWidget {
@@ -12,13 +11,13 @@ class Store extends StatefulWidget {
 
 class _StoreState extends State<Store> {
   abrirProduto() {
-    Navigator.of(context).pushNamed('/produto');
+    Navigator.of(context).pushNamed('/list-product');
   }
 
   List<Product> products = [
-    Product("Produto 1", 99),
-    Product("Produto 2", 45),
-    Product("Produto 3", 67)
+    Product("Produto 1", 99, 'Descrição 1'),
+    Product("Produto 2", 45, 'Descrição 2'),
+    Product("Produto 3", 67, 'Descrição 3')
   ];
 
   @override

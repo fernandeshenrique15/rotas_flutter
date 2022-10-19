@@ -3,7 +3,7 @@ import 'package:semana08_loja/paginas/adm.dart';
 import 'package:semana08_loja/paginas/createClient.dart';
 import 'package:semana08_loja/paginas/createProduct.dart';
 import 'package:semana08_loja/paginas/login.dart';
-import 'package:semana08_loja/paginas/produto.dart';
+import 'package:semana08_loja/paginas/listProduct.dart';
 import 'package:semana08_loja/paginas/store.dart';
 import 'package:semana08_loja/util/temas.dart';
 
@@ -27,11 +27,11 @@ class _MainAppState extends State<MainApp> {
       theme: Temas().dark(),
       routes: {
         '/login': (context) => const LoginPage(),
-        '/createProduct': (context) => const CreateProduct(),
-        '/createClient': (context) => const CreateClient(),
+        '/create-product': (context) => const CreateProduct(),
+        '/create-client': (context) => const CreateClient(),
         '/adm': (context) => const Adm(),
         '/store': (context) => const Store(),
-        '/produto': (context) => const Produto(),
+        '/list-product': (context) => const ListProduct(),
       },
     );
   }

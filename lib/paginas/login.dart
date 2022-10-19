@@ -9,19 +9,19 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtUser = TextEditingController();
   TextEditingController txtSenha = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     fazLogin() {
-      if (txtEmail.text == 'admin' && txtSenha.text == 'admin') {
+      if (txtUser.text == 'admin' && txtSenha.text == 'admin') {
         // Sem opção de voltar página
         Navigator.of(context).pushReplacementNamed('/adm');
 
         // Com opção de voltar
         //Navigator.of(context).pushNamed('/adm');
-      } else if (txtEmail.text == 'cliente' && txtSenha.text == 'cliente') {
+      } else if (txtUser.text == 'cliente' && txtSenha.text == 'cliente') {
         // Sem opção de voltar página
         Navigator.of(context).pushReplacementNamed('/store');
 
@@ -41,8 +41,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Util().createIcon(Icons.store, 90),
                 Util().sizedBox(0, 20),
-                Util().createInput(TextInputType.emailAddress, 'E-mail',
-                    txtEmail, 'Digite o e-mail', false),
+                Util().createInput(TextInputType.text, 'Usuário', txtUser,
+                    'Digite o usuário', false),
                 Util().sizedBox(0, 10),
                 Util().createInput(TextInputType.text, 'Senha', txtSenha,
                     'Digite a senha', true),

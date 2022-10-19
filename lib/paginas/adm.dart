@@ -12,11 +12,11 @@ class _AdmState extends State<Adm> {
   @override
   Widget build(BuildContext context) {
     redirectProduct() {
-      Navigator.of(context).pushNamed('/createProduct');
+      Navigator.of(context).pushNamed('/create-product');
     }
 
     redirectClient() {
-      Navigator.of(context).pushNamed('/createClient');
+      Navigator.of(context).pushNamed('/create-client');
     }
 
     return Scaffold(
